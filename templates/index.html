@@ -1,0 +1,17 @@
+{% extends "templates/base.html" %}
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+	<ul>
+		{% for post in posts %}
+			<li>
+				<p class="title"><b>{{post.title}}</b></p>
+				<p class="content">{{post.content}}</p>
+				{% if post.name %}
+					<p class="name"><i>Publicado por: {{ post.name }}</i></p>
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
+	<a href="/AddPost" class="btn" >Nuevo Post</a>
+{% endblock %}

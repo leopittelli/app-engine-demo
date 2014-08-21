@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+		<title>{% block title %}{% endblock %}</title>
+	</head>
+	<body>
+		<header>
+			<div class="inner">
+				<a href="/"><img src="images/logo.png" /></a>
+			</div>
+		</header>
+		<div id="main-container">
+			<h1>Super Blog de DEVs LATAM!</h1>
+			<div class="inner-content">
+				{% block content %}{% endblock %}
+			</div>
+		</div>
+	</body>
+</html>
+{% endautoescape %}
